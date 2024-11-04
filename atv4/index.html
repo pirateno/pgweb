@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Grid com Bootstrap</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .conteudo {
+            border: 1px solid #333;
+            padding: 15px;
+            text-align: center;
+        }
+        .linha {
+            border: 1px solid #555;
+            margin-top: 10px;
+        }
+        .coluna {
+            border: 1px dashed #999;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container conteudo">
+        <h1>Exercício de Bootstrap - Sistema de Grid</h1>
+
+        
+        <div class="row linha">
+            <div class="col-md-6 coluna">Coluna 1 (col-md-6)</div>
+            <div class="col-md-6 coluna">Coluna 2 (col-md-6)</div>
+        </div>
+
+        
+        <div class="row linha">
+            <div class="col-md-3 coluna">Coluna 1 (col-md-3)</div>
+            <div class="col-md-3 coluna">Coluna 2 (col-md-3)</div>
+            <div class="col-md-3 coluna">Coluna 3 (col-md-3)</div>
+            <div class="col-md-3 coluna">Coluna 4 (col-md-3)</div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
