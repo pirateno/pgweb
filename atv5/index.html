@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 05 - JavaScript</title>
+    <script>
+        function mostrarAlerta() {
+            alert("Bem-vindo à Atividade 05 de JavaScript!");
+        }
+
+        function mostrarAlertaComMensagem(mensagem) {
+            alert(mensagem);
+        }
+
+        function somarNumeros(num1, num2) {
+            let resultado = num1 + num2;
+            alert("A soma dos números é: " + resultado);
+        }
+
+        function escreveTexto() {
+            document.getElementById("mensagem").innerHTML = "Texto escrito pela função JavaScript!";
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 05 - Testando o JavaScript</h1>
+    
+    <button onclick="mostrarAlerta()">Mostrar Alerta</button>
+
+    <button onclick="mostrarAlertaComMensagem('Olá, essa é uma mensagem personalizada!')">Mostrar Alerta com Mensagem</button>
+
+    <button onclick="somarNumeros(5, 10)">Somar 5 + 10</button>
+
+    <div id="mensagem" style="margin-top: 20px; font-size: 18px; color: blue;"></div>
+    
+    <button onclick="escreveTexto()">Escrever Texto</button>
+</body>
+</html>
