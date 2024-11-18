@@ -1,26 +1,30 @@
+// Função para calcular raízes quadradas
 function calcularRaizes() {
-    const numeros =[25,36,40]
+    const numeros = [25, 36, 40];
     const raizes = numeros.map(num => Math.sqrt(num));
     const resultadoDiv = document.createElement('div');
-    resultadoDiv.innerHTML = '<strong>Raizes quadradas:</strong> ${raizes.join(',')};
+    resultadoDiv.innerHTML = <strong>Raízes quadradas:</strong> ${raizes.join(', ')};
     document.getElementById('conteudo').appendChild(resultadoDiv);
 }
 
-const BotaoRaiz = document.createElement('button;')
-BotaoRaiz.textContent = 'Calcular Raízes Quadradas';
-BotaoRaiz.onclick = calcularRaizes;
+// Exibir botão para calcular raízes
+const botaoRaiz = document.createElement('button');
+botaoRaiz.textContent = 'Calcular Raízes Quadradas';
+botaoRaiz.onclick = calcularRaizes;
 document.getElementById('conteudo').appendChild(botaoRaiz);
 
-function calcularRaizes() {
-    const texto = "este texto foi inserido dinamicamente!";
+// Função para escrever texto no div
+function escreverTexto() {
+    const texto = "Este texto foi inserido dinamicamente!";
     const divMensagem = document.createElement('div');
-    Divmensagem.innerHTML = texto;
+    divMensagem.innerHTML = texto;
     document.getElementById('conteudo').appendChild(divMensagem);
 }
 
-const Botaoescrever = document.createElement('button;')
-BotaoRaiz.textContent = 'Calcular Raízes Quadradas';
-BotaoRaiz.onclick = calcularRaizes;
+// Exibir botão para escrever texto
+const botaoEscrever = document.createElement('button');
+botaoEscrever.textContent = 'Escrever no Div';
+botaoEscrever.onclick = escreverTexto;
 document.getElementById('conteudo').appendChild(botaoEscrever);
 
 // Função para capturar texto digitado
@@ -32,7 +36,7 @@ function capturarTexto() {
     document.getElementById('conteudo').appendChild(divSaida);
 }
 
-// Exibir campo de entrada e botão
+// Exibir campo de entrada e botão para capturar texto
 const inputTexto = document.createElement('input');
 inputTexto.type = 'text';
 inputTexto.id = 'inputTexto';
