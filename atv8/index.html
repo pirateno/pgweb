@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Manipulação de Arrays</title>
+        <script>
+            const frutas = ["maça","banana",,"Laranja","manga","uva"];
+
+            function mostrarElementos() {
+                const div = document.getElementsById("resultado");
+                div.innerHTML = frutas.join(",");
+            }
+
+            function mostrarElementosPorPosição() {
+                const posiçao = parseInt(document.getElementsById("posição").value);
+                const div = document.getElementById("resultado");
+                if (posição >= 0 && posicao < frutas.length) {
+                    div.innerHTML = 'Elemento na posição ${posicao}: ${frutas[posicao]}';
+                } else {
+                    div.innerHTML = "Posição inválida!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Manipulação de Arrays</h1>
+        <button onclick="mostrarElementos()">Mostrar todos os elementos</button>
+        <br><br>
+        <div id="resultado" style="border: 1px solid #000; padding: 10px; width: 300px; min-height: 50px;"></div>
+    </body>
+</html>
