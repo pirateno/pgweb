@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilha de Pessoas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input, button {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gerenciando uma Pilha de Pessoas</h1>
+
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" placeholder="Digite um nome">
+  <button onclick="adicionarPessoa()">Adicionar</button>
+  <button onclick="removerPessoa()">Remover</button>
+
+  <h2>Lista de Pessoas:</h2>
+  <ul id="listaPessoas"></ul>
+
+  <script>
+    let pilhaPessoas = [];
+
+    function adicionarPessoa() {
+      const nomeInput = document.getElementById("nome");
+      const nome = nomeInput.value.trim();
+
+      if (nome) {
+        pilhaPessoas.push(nome);
+        atualizarLista();
+        nomeInput.value = "";
+      } else {
+        alert("Por favor, insira um nome válido.");
+      }
+    }
+
+    function removerPessoa() {
+      if (pilhaPessoas.length > 0) {
+        const removido = pilhaPessoas.pop();
+        atualizarLista();
+        alert(A pessoa removida foi: ${removido});
+      } else {
+        alert("A pilha está vazia. Nenhuma pessoa para remover.");
+      }
+    }
+
+    function atualizarLista() {
+      const listaPessoas = document.getElementById("listaPessoas");
+      listaPessoas.innerHTML = ""; 
+
+      pilhaPessoas.forEach((pessoa) => {
+        const li = document.createElement("li");
+        li.textContent = pessoa;
+        listaPessoas.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
