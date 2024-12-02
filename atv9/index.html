@@ -44,6 +44,8 @@
     function removerPessoa() {
       if (pilhaPessoas.length > 0) {
         const removido = pilhaPessoas.pop();
+        console.log("Elemento removido:", removido);
+        console.log("Estado atual da pilha:", pilhaPessoas);
         atualizarLista();
         alert(`A pessoa removida foi: ${removido}`);
       } else {
